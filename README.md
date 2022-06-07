@@ -1,10 +1,10 @@
 Instructions for use:
 
-1) Open a command line window and use run "pip install -r requirements.txt" to install all necessary packages
+1) Open a command line window and use "pip install -r requirements.txt" to install all necessary packages
 2) In the same command line run "A.py"
 3) Select the "cad_mesh.stl" file and close the file picker window
-3) Open another command line window and run "B.py"
-4) output.csv, containing all the vertices of the given stl file will appear
+4) Open another command line window and run "B.py"
+5) output.csv, containing all the vertices of the given stl file will appear
 
 
 
