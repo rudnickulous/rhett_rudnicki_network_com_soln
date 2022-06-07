@@ -5,14 +5,18 @@ import numpy as np
 
 headerSize = 10
 
-#  set up client side ZeroMQ socket
-context = zmq.Context()
-ZMQsocket  = context.socket(zmq.REQ)
-ZMQsocket.connect("tcp://localhost:5555")
-
-#set up client side Websocket
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('127.0.0.1', 1310))
+try:
+    #  set up client side ZeroMQ socket
+    context = zmq.Context()
+    ZMQsocket  = context.socket(zmq.REQ)
+    ZMQsocket.connect("tcp://localhost:5555")
+    #set up client side Websocket
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(('127.0.0.1', 1310))
+except:
+    print("Process A.py not yet running")
+    quit()
+    
 
 while True:
     full_msg = b''
